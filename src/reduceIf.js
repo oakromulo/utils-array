@@ -12,15 +12,17 @@ type Reduce<Element, Result> = (
   index: number
 ) => $Subtype<Result>;
 
-type ReduceIf = <Element, Result>(
+/**
+ * Reduce the given array applying reduce function only to elements filtered
+ * (the ones which by passing them to filter function, this one returned true)
+ */
+const reduceIf = <Element, Result>(
   filter: Filter<Element, Result>,
   reduce: Reduce<Element, Result>,
   resultInitial: $Subtype<Result>,
-  elements: Array<$Subtype<Element>>
-) => Result;
-
-const reduceIf: ReduceIf = (filter, reduce, resultInitial, elements) =>
-  elements.reduce(
+  array: Array<$Subtype<Element>>
+): Result =>
+  array.reduce(
     (result, element, index) =>
       filter(element, index, result) ? reduce(result, element, index) : result,
     resultInitial

@@ -1,14 +1,16 @@
 // @flow
 
-type Insert = <Value>(
-  array: Array<$Subtype<Value>>,
+/**
+ * Returns a new Array with the result of having
+ * inserted the given elements at the specified index
+ */
+const insert = <Element>(
   index: number,
-  ...values: Array<$Subtype<Value>>
-) => Array<Value>;
-
-const insert: Insert = (array, index, ...values) => [
+  elements: Array<Element>,
+  array: Array<Element>
+): Array<Element> => [
   ...array.slice(0, index),
-  ...values,
+  ...elements,
   ...array.slice(index + 1)
 ];
 

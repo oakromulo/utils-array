@@ -10,24 +10,21 @@ type Reduce<Element, Result> = (
   result: Result,
   element: Element,
   index: number
-) => $Subtype<Result>;
-
-type ReduceWhile = <Element, Result>(
-  shouldProceed: ShouldProceed<Element, Result>,
-  reduce: Reduce<Element, Result>,
-  resultInitial: $Subtype<Result>,
-  elements: Array<$Subtype<Element>>
 ) => Result;
 
-const reduceWhile: ReduceWhile = (
-  shouldProceed,
-  reduce,
-  resultInitial,
-  elements
-) => {
+/**
+ * Reduce the given array applying reduce function
+ * while shouldProceed function returns true
+ */
+const reduceWhile = <Element, Result>(
+  shouldProceed: ShouldProceed<Element, Result>,
+  reduce: Reduce<Element, Result>,
+  resultInitial: Result,
+  array: Array<Element>
+): Result => {
   let result = resultInitial;
 
-  elements.every((element, index) => {
+  array.every((element, index) => {
     const proceed = shouldProceed(element, index, result);
 
     if (proceed) {

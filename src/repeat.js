@@ -1,7 +1,10 @@
 // @flow
 
-type Repeat = <Value>(value: Value, count: number) => Array<$Supertype<Value>>;
-
-const repeat: Repeat = (value, count) => [...Array(count)].map(() => value);
+/**
+ * Returns a new Array with the given size (count)
+ * filled with the specified element
+ */
+const repeat = <Element>(count: number, element: Element): Array<Element> =>
+  [...Array(count)].map(() => element);
 
 export default repeat;

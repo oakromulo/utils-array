@@ -1,12 +1,14 @@
 // @flow
 
-type Remove = <Value>(
-  array: Array<$Subtype<Value>>,
+/**
+ * Returns a new Array with the result of having
+ * removed the specified amount (count) of elements at the given index
+ */
+const remove = <Element>(
+  count: number,
   index: number,
-  count?: number
-) => Array<Value>;
-
-const remove: Remove = (array, index, count = 1) => {
+  array: Array<Element>
+): Array<Element> => {
   const indexToRemove = index < 0 ? array.length - index : index;
 
   return [

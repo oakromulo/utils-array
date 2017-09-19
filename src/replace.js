@@ -1,15 +1,17 @@
 // @flow
 
-type Replace = <Value>(
-  array: Array<$Subtype<Value>>,
+/**
+ * Returns a new Array with the result of having
+ * replaced the elements at the given index with the ones specified
+ */
+const replace = <Element>(
   index: number,
-  ...values: Array<Value>
-) => Array<$Supertype<Value>>;
-
-const replace: Replace = (array, index, ...values) => [
+  elements: Array<Element>,
+  array: Array<Element>
+): Array<Element> => [
   ...array.slice(0, index),
-  ...values,
-  ...array.slice(index + values.length)
+  ...elements,
+  ...array.slice(index + elements.length)
 ];
 
 export default replace;
