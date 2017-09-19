@@ -2,6 +2,7 @@
   "plugins": ["transform-runtime"],
   "presets": [
     "flow",
-    "stage-0"
+    "stage-0",
+    ["env", {"modules": false, "spec": true, "useBuiltIns": true}]
   ]
 }
