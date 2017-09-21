@@ -1,8 +1,8 @@
 // @flow
 
 /**
- * Returns a new Array with the result of having
- * inserted the given elements at the specified index
+ * Returns a new Array with the result of having inserted the given elements at
+ * the specified index.
  */
 const insert = <Element>(
   index: number,

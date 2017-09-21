@@ -1,7 +1,7 @@
 // @flow
 
 /**
- * Returns a new Array with elements prepended to the one given
+ * Returns a new Array with elements prepended to the one given.
  */
 const prepend = <Element>(
   elements: Array<Element>,

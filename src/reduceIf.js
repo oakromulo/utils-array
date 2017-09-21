@@ -13,7 +13,8 @@ type Reduce<Element, Result> = (
 ) => $Subtype<Result>;
 
 /**
- * Reduce the given array applying reduce function only to elements filtered
+ * Reduce the given array applying reduce function only to elements filtered.
+ * 
  * (the ones which by passing them to filter function, this one returned true)
  */
 const reduceIf = <Element, Result>(

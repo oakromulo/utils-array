@@ -1,8 +1,8 @@
 // @flow
 
 /**
- * Returns a new Array with the result of having
- * replaced the elements at the given index with the ones specified
+ * Returns a new Array with the result of having replaced the elements at the
+ * given index with the ones specified.
  */
 const replace = <Element>(
   index: number,

@@ -13,8 +13,8 @@ type Reduce<Element, Result> = (
 ) => Result;
 
 /**
- * Reduce the given array applying reduce function
- * while shouldProceed function returns true
+ * Reduce the given array applying reduce function while shouldProceed function
+ * returns true.
  */
 const reduceWhile = <Element, Result>(
   shouldProceed: ShouldProceed<Element, Result>,
