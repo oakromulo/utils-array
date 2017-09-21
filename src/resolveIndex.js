@@ -1,0 +1,13 @@
+// @flow
+
+/**
+ * Returns an absolute index from a relative one.
+ * 
+ * Relative indexes differ from absolute ones in that they can be negative and
+ * in those cases it would be as simple as substracting them from the length of
+ * the array from where they belong to obtain their absolute counterparts.
+ */
+const resolveIndex = (array: Array<*>, relativeIndex: number) =>
+  relativeIndex < 0 ? array.length - relativeIndex : relativeIndex;
+
+export default resolveIndex;
