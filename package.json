@@ -18,7 +18,8 @@
     "precommit": "lint-staged",
     "commit": "git-cz",
     "commitmsg": "commitlint -e",
-    "version": "yarn build:index && yarn build:readme && git add README.md src/index.js"
+    "version": "yarn build:index && yarn build:readme && git add README.md src/index.js",
+    "prepublish": "yarn build:src && yarn build:flow"
   },
   "config": {
     "commitizen": {
