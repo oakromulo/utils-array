@@ -1,15 +1,14 @@
 {
   "name": "@jumpn/utils-array",
-  "private": true,
   "version": "0.1.0",
   "description": "Array utilities (immutability, fp helpers)",
-  "main": "dist/cjs/index.js",
-  "module": "dist/es/index.js",
-  "browser": "dist/umd/index.js",
+  "module": "dist/index.js",
+  "main": "compat/cjs/index.js",
+  "browser": "compat/umd/index.js",
   "scripts": {
-    "clean": "rm -rfv dist",
+    "clean": "rm -rfv dist compat",
     "flow-copy-source": "flow-copy-source -v src",
-    "build:flow": "yarn flow-copy-source dist/cjs && yarn flow-copy-source dist/es",
+    "build:flow": "yarn flow-copy-source dist && yarn flow-copy-source compat/cjs",
     "build:index": "create-index --banner '// @flow' src/ && yarn lint:fix src/index.js",
     "build:readme": "pkg-to-readme --template ./README.ejs --force && documentation readme src/** --section API",
     "build:src": "rollup -c",
@@ -19,6 +18,17 @@
     "precommit": "lint-staged",
     "commit": "git-cz",
     "commitmsg": "commitlint -e"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn run lint:fix",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -66,16 +76,5 @@
     "rollup-plugin-babel": "3.0.2",
     "rollup-plugin-commonjs": "8.2.1",
     "rollup-plugin-node-resolve": "3.0.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "yarn run lint:fix",
-      "git add"
-    ]
   }
 }
