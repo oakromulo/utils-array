@@ -8,7 +8,7 @@
 
 ### append
 
-Returns a new Array with elements appended to the one given
+Returns a new Array with elements appended to the one given.
 
 **Parameters**
 
@@ -19,8 +19,8 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ### convertIfNot
 
-Returns input if it is an Array or
-returns a new Array with input inside if it is not.
+Returns input if it is an Array or returns a new Array with input inside if
+it is not.
 
 **Parameters**
 
@@ -30,17 +30,18 @@ Returns **(Input | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScri
 
 ### cycleNext
 
-Returns 0 if current index is the last one, or returns next if it is not
+Returns 0 if current index is the last one, or returns next if it is not.
 
 **Parameters**
 
--   `currentIndex` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+-   `currentIndex` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 ### fromObject
 
 Creates a new array using the given object
-If all of its entries are array keys
+If all of its entries are array keys.
+
 (it could also have a property length with its size)
 
 **Parameters**
@@ -49,8 +50,8 @@ If all of its entries are array keys
 
 ### insert
 
-Returns a new Array with the result of having
-inserted the given elements at the specified index
+Returns a new Array with the result of having inserted the given elements at
+the specified index.
 
 **Parameters**
 
@@ -62,7 +63,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ### isKey
 
-Returns true if the given string is an Array key or false otherwise
+Returns true if the given string is an Array key or false otherwise.
 
 **Parameters**
 
@@ -70,18 +71,18 @@ Returns true if the given string is an Array key or false otherwise
 
 ### isLastIndex
 
-Returns true if given index is the last one or false otherwise
+Returns true if given index is the last one or false otherwise.
 
 **Parameters**
 
--   `index` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+-   `index` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 ### isPossibleFromObject
 
-Returns true if an Array can be created from the given Object,
-or in other words, if it has or not a length property,
-and the rest of its keys are Array ones
+Returns true if an Array can be created from the given Object, or in other
+words, if it has or not a length property, and the rest of its keys are Array
+ones.
 
 **Parameters**
 
@@ -91,7 +92,7 @@ and the rest of its keys are Array ones
 
 ### prepend
 
-Returns a new Array with elements prepended to the one given
+Returns a new Array with elements prepended to the one given.
 
 **Parameters**
 
@@ -102,7 +103,8 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ### reduceIf
 
-Reduce the given array applying reduce function only to elements filtered
+Reduce the given array applying reduce function only to elements filtered.
+
 (the ones which by passing them to filter function, this one returned true)
 
 **Parameters**
@@ -116,8 +118,8 @@ Returns **Result**
 
 ### reduceWhile
 
-Reduce the given array applying reduce function
-while shouldProceed function returns true
+Reduce the given array applying reduce function while shouldProceed function
+returns true.
 
 **Parameters**
 
@@ -130,21 +132,21 @@ Returns **Result**
 
 ### remove
 
-Returns a new Array with the result of having
-removed the specified amount (count) of elements at the given index
+Returns a new Array with the result of having removed the specified amount
+(count) of elements at the given index.
 
 **Parameters**
 
--   `count` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 -   `index` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `count` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)>** 
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)>** 
 
 ### repeat
 
-Returns a new Array with the given size (count)
-filled with the specified element
+Returns a new Array with the given size (count) filled with the specified
+element.
 
 **Parameters**
 
@@ -155,8 +157,8 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ### replace
 
-Returns a new Array with the result of having
-replaced the elements at the given index with the ones specified
+Returns a new Array with the result of having replaced the elements at the
+given index with the ones specified.
 
 **Parameters**
 
@@ -165,6 +167,19 @@ replaced the elements at the given index with the ones specified
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)>** 
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)>** 
+
+### resolveIndex
+
+Returns an absolute index from a relative one.
+
+Relative indexes differ from absolute ones in that they can be negative and
+in those cases it would be as simple as substracting them from the length of
+the array from where they belong to obtain their absolute counterparts.
+
+**Parameters**
+
+-   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+-   `relativeIndex` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 ## License
 
