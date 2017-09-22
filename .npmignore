@@ -1,6 +1,6 @@
 src/
 .*
 commitlint.config.js
-README.ejs
+readmeTemplate.ejs
 rollup.config.js
 yarn.lock
