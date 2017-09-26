@@ -7,7 +7,7 @@ import isKey from "./isKey";
  * words, if it has or not a length property, and the rest of its keys are Array
  * ones.
  */
-const isPossibleFromObject = ({length, ...rest}: Object) =>
+const isPossibleFromObject = ({length, ...rest}: Object): boolean =>
   Object.keys(rest).every(isKey);
 
 export default isPossibleFromObject;

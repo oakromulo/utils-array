@@ -8,7 +8,7 @@ const getObjectLength = object => Math.max(...(Object.keys(object): any)) + 1;
  * 
  * (it could also have a property length with its size)
  */
-const fromObject = (object: Object) =>
+const fromObject = (object: Object): Array<any> =>
   Array.from(
     "length" in object ? object : {...object, length: getObjectLength(object)}
   );
