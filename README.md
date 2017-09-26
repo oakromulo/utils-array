@@ -1,6 +1,8 @@
 # @jumpn/utils-array
 
 > Array utilities (immutability, fp helpers)
+>
+> **NOTE**: All the functions described in [API](#API) are curried
 
 ## API
 
@@ -37,6 +39,8 @@ Returns 0 if current index is the last one, or returns next if it is not.
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 -   `currentIndex` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
+Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
 ### fromObject
 
 Creates a new array using the given object
@@ -47,6 +51,8 @@ If all of its entries are array keys.
 **Parameters**
 
 -   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 ### insert
 
@@ -69,6 +75,8 @@ Returns true if the given string is an Array key or false otherwise.
 
 -   `string` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+
 ### isLastIndex
 
 Returns true if given index is the last one or false otherwise.
@@ -77,6 +85,8 @@ Returns true if given index is the last one or false otherwise.
 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 -   `index` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ### isPossibleFromObject
 
@@ -89,6 +99,8 @@ ones.
 -   `$0` **any** 
     -   `$0.length`  
     -   `$0.rest` **...any** 
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ### prepend
 
@@ -104,8 +116,6 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ### reduceIf
 
 Reduce the given array applying reduce function only to elements filtered.
-
-(the ones which by passing them to filter function, this one returned true)
 
 **Parameters**
 
@@ -180,6 +190,8 @@ the array from where they belong to obtain their absolute counterparts.
 
 -   `array` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 -   `relativeIndex` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 ## License
 

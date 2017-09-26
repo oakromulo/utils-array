@@ -1,5 +1,7 @@
 // @flow
 
+import {curry} from "flow-static-land/lib/Fun";
+
 type ShouldProceed<Element, Result> = (
   element: Element,
   index: number,
@@ -37,4 +39,4 @@ const reduceWhile = <Element, Result>(
   return result;
 };
 
-export default reduceWhile;
+export default curry(reduceWhile);

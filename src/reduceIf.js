@@ -1,5 +1,7 @@
 // @flow
 
+import {curry} from "flow-static-land/lib/Fun";
+
 type Filter<Element, Result> = (
   element: Element,
   index: number,
@@ -14,8 +16,6 @@ type Reduce<Element, Result> = (
 
 /**
  * Reduce the given array applying reduce function only to elements filtered.
- * 
- * (the ones which by passing them to filter function, this one returned true)
  */
 const reduceIf = <Element, Result>(
   filter: Filter<Element, Result>,
@@ -29,4 +29,4 @@ const reduceIf = <Element, Result>(
     resultInitial
   );
 
-export default reduceIf;
+export default curry(reduceIf);

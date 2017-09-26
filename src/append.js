@@ -1,5 +1,7 @@
 // @flow
 
+import {curry} from "flow-static-land/lib/Fun";
+
 /**
  * Returns a new Array with elements appended to the one given.
  */
@@ -8,4 +10,4 @@ const append = <Element>(
   array: Array<Element>
 ): Array<Element> => [...array, ...elements];
 
-export default append;
+export default curry(append);
