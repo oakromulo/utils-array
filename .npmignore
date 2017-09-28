@@ -4,3 +4,4 @@ commitlint.config.js
 readmeTemplate.ejs
 rollup.config.js
 yarn.lock
+yarn-error.lock
