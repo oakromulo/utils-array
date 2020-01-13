@@ -1,6 +1,6 @@
 // @flow
 
-import {curry} from "flow-static-land/lib/Fun";
+import {curry} from "./fun";
 
 type Filter<Element, Result> = (
   element: Element,

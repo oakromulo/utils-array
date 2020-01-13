@@ -1,6 +1,6 @@
 // @flow
 
-import {curry} from "flow-static-land/lib/Fun";
+import {curry} from "./fun";
 
 /**
  * Returns true if given index is the last one or false otherwise.

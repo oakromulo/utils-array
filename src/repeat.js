@@ -1,6 +1,6 @@
 // @flow
 
-import {curry} from "flow-static-land/lib/Fun";
+import {curry} from "./fun";
 
 /**
  * Returns a new Array with the given size (count) filled with the specified

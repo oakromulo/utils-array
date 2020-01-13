@@ -1,6 +1,6 @@
 // @flow
 
-import {curry} from "flow-static-land/lib/Fun";
+import {curry} from "./fun";
 
 /**
  * Returns an absolute index from a relative one.
